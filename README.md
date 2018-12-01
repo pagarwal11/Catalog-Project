@@ -13,4 +13,4 @@ How to Run:
 3. Copy the contents of this project into catalog folder.
 4. Launch the Vagrant VM (vagrant up)
 5. Run the application within the VM (python /vagrant/catalog/application.py)
-6. Access and test your application by visiting http://localhost:5000 locally
+6. Access and test the application by visiting http://localhost:5000 locally
