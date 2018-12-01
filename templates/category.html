@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2> List of Categories </h2>
+{% if categories != [] %}
+    <a href="{{url_for('addCategory')}}" >
+        <button>Create Category</button>
+    </a>
+    {% for category in categories %}
+        <h3>{{category.name}}</h3>
+        <a href="{{url_for('showItem', category_id = category.id)}}">
+             <button>Item</button>
+         </a>
+         <a href="{{url_for('editCategory',category_id = category.id)}}">
+             <button>Edit</button>
+         </a>
+        <a href="{{url_for('deleteCategory',category_id = category.id)}}">
+            <button>Delete</button>
+        </a>
+    {% endfor %}
+{% else %}
+    <p>No categories present<p>
+    <a href="{{url_for('addCategory')}}" >
+        <button>Create Category</button>
+    </a>
+{% endif %}
+{% endblock %}
